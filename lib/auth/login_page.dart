@@ -1,3 +1,4 @@
+import 'package:chat_app/styles/button.dart';
 import 'package:chat_app/styles/text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,8 @@ class _LoginPageState extends State<LoginPage>  {
                 NewTextField(controller: emailContr, obscure: false, hint: 'Email'),
                 SizedBox(height: 20,),
                 NewTextField(controller: passContr, obscure: true, hint: 'Password'),
+                SizedBox(height: 20,),
+                NewButton(text: 'Войти', onTap: (){},)
               ],
             ),
           ),
