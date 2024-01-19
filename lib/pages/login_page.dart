@@ -24,13 +24,23 @@ class _LoginPageState extends State<LoginPage>  {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 200,),
-                NewTextField(controller: emailContr, obscure: false, hint: 'Email'),
+                SizedBox(height: 30,),
+                NewTextField(controller: emailContr, obscure: false, hint: 'Эл. почта'),
                 SizedBox(height: 20,),
-                NewTextField(controller: passContr, obscure: true, hint: 'Password'),
+                NewTextField(controller: passContr, obscure: true, hint: 'Пароль'),
                 SizedBox(height: 20,),
-                NewButton(text: 'Войти', onTap: (){},)
+                NewButton(text: 'Войти', onTap: (){},),
+                SizedBox(height: 20,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Нет аккаунта?'),
+                    SizedBox(width: 5,),
+                    Text('Зарегистрироваться сейчас', style: TextStyle(fontWeight: FontWeight.bold),),
+                  ],
+                )
               ],
             ),
           ),
@@ -38,6 +48,10 @@ class _LoginPageState extends State<LoginPage>  {
       )
 
     );
+  }
+
+  void Login(){
+
   }
 
 }
